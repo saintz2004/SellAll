@@ -1,26 +1,24 @@
 name: SellAll
 main: AndreasHGK\SellAll\SellAll
-version: 1.3.0
+version: 1.3.1
 api: 3.0.0
 load: POSTWORLD
 author: AndreasHGK
 description: Sell all items in your hand or all items in your inventory with the same type as in your hand
 depend: ["EconomyAPI"]
-
 commands:
  sell:
   description: "Sell command"
   usage: "/sell all|hand|inventory"
-  permission: sellall.command
-
+  permission: sell.command
 permissions:
- sellall:
+ sell.command:
   default: op
-  description: "SellALl root permission"
-  children:
-   sellall.command:
-    default: true
-    description: "Allows the use of /sell"
-   sellall.reload:
-    default: op
-    description: "Reloads the plugin"
+ sell.hand:
+  default: op
+ sell.all:
+  default: op
+ sell.inv:
+  default: op
+ sell.reload:
+  default: op
